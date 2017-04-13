@@ -6,8 +6,8 @@ from .views import (RestaurantCreation, RestaurantDelete, RestaurantDetail,
 urlpatterns = [
     url(r'^$', RestaurantList.as_view(), name='list'),
     url(r'^(?P<pk>\d+)$', RestaurantDetail.as_view(), name='detail'),
-    url(r'^nuevo$', RestaurantCreation.as_view(), name='new'),
-    url(r'^editar/(?P<pk>\d+)$', RestaurantUpdate.as_view(), name='edit'),
-    url(r'^borrar/(?P<pk>\d+)$', RestaurantDelete.as_view(), name='delete'),
+    url(r'^new$', RestaurantCreation.as_view(), name='new'),
+    url(r'^edit/(?P<pk>\d+)$', RestaurantUpdate.as_view(), name='edit'),
+    url(r'^delete/(?P<pk>\d+)$', RestaurantDelete.as_view(), name='delete'),
 
 ]

@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Restaurant(models.Model):
+    """Structure of the object Restaurant."""
     name = models.CharField("Nombre", max_length=140, unique=True)
     rating = models.IntegerField("Valoración", default=0)
     phone = models.CharField("Teléfono", max_length=15)
