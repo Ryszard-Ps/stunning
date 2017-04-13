@@ -1,0 +1,18 @@
+<h1>Restaurantes de México</h1>
+
+<p>
+    <a href="{% url "restaurants:new" %}">Agregar restaurante</a>
+</p>
+
+<ul>
+    {% for restaurant in object_list %}
+        <li>
+            <p>{{ restaurant.name }}</p>
+            <p>
+                <a href="{% url "restaurants:detail" restaurant.id %}">Ver</a> | 
+                <a href="{% url "restaurants:edit" restaurant.id %}">Editar</a> |
+                <a href="{% url "restaurants:delete" restaurant.id %}">Borrar</a>
+            </p>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,8 @@
+{% load static from staticfiles  %}
+<h1>{{ restaurant.name }}</h1>
+<p>Valorado <i>{{ restaurant.rating }}</i></p>
+<p>Telefono <i>{{ restaurant.phone }}</i></p>
+<p>Ciudad <i>{{ restaurant.city }}</i></p>
+<p>
+    <a href="{% url "restaurants:list" %}">Regresar</a>
+</p>
